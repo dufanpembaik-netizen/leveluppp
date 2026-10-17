@@ -1,0 +1,8 @@
+WEBSITE ULANG TAHUN - VERSI REVISI
+
+1. Buka index.html di browser untuk melihat website.
+2. Pastikan folder pages berada satu folder dengan index.html.
+3. Efek latar biru muda dan animasi smooth tetap ada.
+4. Label kecil nomor halaman dan tombol navigasi bawah dihilangkan.
+5. Ditambahkan teks ucapan ulang tahun yang bergerak di bagian bawah.
+6. Untuk membagikan website secara online, unggah isi folder ini ke layanan hosting statis seperti Netlify Drop.

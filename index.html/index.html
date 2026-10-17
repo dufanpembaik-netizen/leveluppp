@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#d9edff">
+<title>Birthday Cintaakuu 🫶🏻</title>
+<style>
+:root{--pink:#8fc9ff;--dark:#245d91;--cream:#f4faff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 12%,#ffffff 0 2px,transparent 3px),radial-gradient(ellipse at 85% 22%,#c4e5ff88,transparent 42%),linear-gradient(135deg,#edf8ff,#d6ebff 55%,#f8fcff);color:#244b70;font-family:Georgia,"Times New Roman",serif}
+.top{position:sticky;top:0;z-index:20;background:#f4faffeb;backdrop-filter:blur(12px);border-bottom:1px solid #b9daf6;padding:10px 14px;display:flex;gap:10px;align-items:center;justify-content:space-between}
+.brand{font-weight:bold;font-size:14px;letter-spacing:.02em}.nav{display:flex;gap:5px;align-items:center;justify-content:center;width:100%;flex-wrap:wrap}.nav button,.action{border:1px solid #efbfd0;background:#fff;color:#245d91;border-radius:99px;padding:8px 11px;font-size:13px;cursor:pointer}.nav button.active{background:#397fb8;color:white;border-color:#397fb8}
+main{padding:24px 12px 60px}.intro{text-align:center;padding:26px 10px 18px}.intro .hearts{font-size:28px;letter-spacing:9px;animation:float 3s ease-in-out infinite}.intro h1{font-size:clamp(27px,5vw,44px);margin:10px 0;color:#245d91}.intro p{font:14px/1.7 system-ui,sans-serif;margin:0 auto;max-width:520px;color:#5d7d9b}
+.intro h1{ text-shadow:0 4px 18px #9bcfff88; }
+.intro .sweet-note{font:14px/1.8 system-ui,sans-serif;max-width:480px;margin:0 auto;color:#52799d}
+.floaties{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:10}
+.floaty{position:absolute;bottom:-45px;left:var(--x);font-size:var(--size);opacity:0;animation:floatUp var(--duration) linear var(--delay) infinite;filter:drop-shadow(0 2px 8px #7bb7ed88)}
+.twinkle{position:absolute;left:var(--x);top:var(--y);font-size:var(--size);color:#fff;opacity:.25;text-shadow:0 0 8px #72baff,0 0 16px #fff;animation:twinkle var(--duration) ease-in-out var(--delay) infinite alternate}
+@keyframes twinkle{from{opacity:.18;transform:scale(.7) rotate(0deg)}to{opacity:1;transform:scale(1.25) rotate(35deg)}}
+@keyframes floatUp{0%{transform:translate3d(0,0,0) rotate(0deg) scale(.7);opacity:0}12%{opacity:.78}82%{opacity:.68}100%{transform:translate3d(var(--drift),-115vh,0) rotate(35deg) scale(1.12);opacity:0}}
+.sparkle-layer{position:fixed;inset:0;pointer-events:none;z-index:9;background-image:radial-gradient(circle,#fff 1px,transparent 2px),radial-gradient(circle,#8fc9ff 1px,transparent 2px),radial-gradient(circle,#fff 1.5px,transparent 2.5px);background-size:72px 88px,112px 125px,165px 155px;background-position:0 0,45px 30px,100px 70px;opacity:.72;animation:starTwinkle 3.2s ease-in-out infinite alternate}
+@keyframes starTwinkle{from{opacity:.24;transform:translateY(0)}to{opacity:.68;transform:translateY(-8px)}}
+.book{width:min(100%,1000px);margin:0 auto;display:grid;gap:24px}.page{position:relative;width:100%;overflow:hidden;border-radius:7px;background:white;box-shadow:0 18px 50px #245d9124;animation:appear .65s both;scroll-margin-top:85px}.page img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain}.page:after{content:"";position:absolute;inset:0;pointer-events:none;border:1px solid #ffffff88;box-shadow:inset 0 0 30px #245d910a}
+.pageno{position:absolute;bottom:10px;right:12px;background:#fffdf0d9;border:1px solid #f4c9d8;color:#245d91;padding:5px 9px;border-radius:99px;font:11px system-ui,sans-serif}
+.page-controls{display:flex;justify-content:center;gap:10px;margin:22px auto 0}
+@keyframes appear{from{opacity:0;transform:translateY(18px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(min-width:760px){main{padding:28px 24px 70px}.book{gap:32px}.top{padding:12px 24px}.brand{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+
+.gift-gate{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 20% 15%,#fff 0 2px,transparent 3px),linear-gradient(145deg,#e8f5ff,#b9ddff 55%,#f5fbff);display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;transition:opacity .65s,visibility .65s}
+.gift-gate.hide{opacity:0;visibility:hidden;pointer-events:none}
+.gift-card{width:min(520px,100%);padding:30px 24px;border:1px solid #ffffffc9;border-radius:30px;background:#ffffffb8;box-shadow:0 24px 70px #225b8c24;backdrop-filter:blur(12px)}
+.gift-card h1{font-size:clamp(28px,7vw,42px);line-height:1.12;color:#245d91;margin:12px 0}
+.gift-card p{font:15px/1.7 system-ui,sans-serif;color:#41698d}
+.gift-box{width:clamp(150px,42vw,230px);height:clamp(150px,42vw,230px);object-fit:contain;cursor:pointer;display:block;margin:4px auto;filter:drop-shadow(0 13px 10px #245d9125);animation:giftBounce 1.8s ease-in-out infinite;transition:transform .3s}
+.gift-box:hover{transform:scale(1.08) rotate(-4deg)}
+.gift-note{display:none;background:#fff;border:1px dashed #7db7ec;border-radius:18px;padding:18px;margin:18px 0;color:#245d91;font:15px/1.7 system-ui,sans-serif}
+.gift-note.show{display:block;animation:appear .5s both}
+.gift-open{display:none}.gift-open.show{display:inline-block;animation:appear .5s both}
+@keyframes giftBounce{50%{transform:translateY(-9px) rotate(2deg)}}
+
+
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 15% 30%,#ffffffb0 0 3px,transparent 4px),radial-gradient(circle at 78% 68%,#ffffff90 0 2px,transparent 3px),radial-gradient(ellipse at 80% 10%,#a9d8ff66,transparent 38%);background-size:180px 180px,230px 230px,100% 100%;animation:blueDrift 16s ease-in-out infinite alternate}
+.gift-gate{background:radial-gradient(circle at 15% 20%,#ffffff 0 2px,transparent 3px),radial-gradient(circle at 80% 75%,#ffffffb5 0 3px,transparent 4px),radial-gradient(ellipse at 15% 90%,#91caff88,transparent 40%),linear-gradient(145deg,#eaf7ff,#b9ddff 52%,#f5fbff);overflow:hidden}
+.gift-gate:before,.gift-gate:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;border:1px solid #ffffff90;box-shadow:0 0 0 24px #ffffff20,0 0 0 48px #ffffff18;animation:orbit 14s linear infinite;pointer-events:none}
+.gift-gate:before{top:-90px;left:-90px}.gift-gate:after{right:-100px;bottom:-110px;animation-direction:reverse}
+.gift-card{position:relative;z-index:1;border-radius:34px;background:linear-gradient(145deg,#ffffffd9,#f6fbffb8);box-shadow:0 28px 80px #225b8c2b,inset 0 1px 0 #fff;border-color:#ffffff}
+.gift-card:before{content:"";position:absolute;inset:9px;border:1px solid #ffffffc9;border-radius:26px;pointer-events:none}
+.gift-box{filter:drop-shadow(0 16px 12px #245d9133);text-shadow:0 6px 22px #ffffff;position:relative;z-index:1}
+.gift-open{background:linear-gradient(135deg,#347eb8,#245d91)!important;color:#fff!important;border:0!important;padding:12px 20px!important;box-shadow:0 8px 20px #245d9133}
+.action{transition:transform .25s,box-shadow .25s,background .25s}.action:hover{transform:translateY(-2px);box-shadow:0 8px 18px #245d9118}
+.page{transition:transform .4s,box-shadow .4s;position:relative}.page:hover{transform:translateY(-3px);box-shadow:0 24px 60px #245d9133}.letter-sticker{position:absolute;left:50%;top:50%;width:clamp(90px,24vw,150px);height:auto;z-index:3;filter:drop-shadow(0 5px 7px #173b6628);pointer-events:none;transform:translate(-50%,-50%) rotate(0deg)}
+@keyframes blueDrift{from{transform:translate3d(-8px,-5px,0)}to{transform:translate3d(10px,8px,0)}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+
+
+.love-ticker{width:min(100%,1000px);margin:30px auto 4px;overflow:hidden;border-top:1px solid #b9daf688;border-bottom:1px solid #b9daf688;padding:15px 0;color:#397fb8;font:700 12px/1.4 system-ui,sans-serif;letter-spacing:.16em;white-space:nowrap;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.ticker-track{display:flex;width:max-content;animation:marquee 26s linear infinite}
+.ticker-track span{padding:0 28px}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+</style>
+</head>
+<body>
+<div class="sparkle-layer" aria-hidden="true"></div>
+<div class="twinkles" aria-hidden="true"><span class="twinkle" style="--x:8%;--y:18%;--size:19px;--duration:2.2s;--delay:-.4s">✦</span><span class="twinkle" style="--x:23%;--y:42%;--size:14px;--duration:2.8s;--delay:-1s">✧</span><span class="twinkle" style="--x:79%;--y:15%;--size:22px;--duration:2.4s;--delay:-.8s">✦</span><span class="twinkle" style="--x:91%;--y:48%;--size:17px;--duration:3s;--delay:-1.6s">✧</span><span class="twinkle" style="--x:13%;--y:73%;--size:15px;--duration:2.5s;--delay:-.9s">✦</span><span class="twinkle" style="--x:72%;--y:82%;--size:19px;--duration:2.7s;--delay:-1.3s">✧</span><span class="twinkle" style="--x:48%;--y:10%;--size:13px;--duration:2.1s;--delay:-.6s">✦</span></div>
+<div class="floaties" aria-hidden="true"><span class="floaty" style="--x:5%;--size:22px;--duration:13s;--delay:-2s;--drift:22px">💙</span><span class="floaty" style="--x:17%;--size:17px;--duration:16s;--delay:-8s;--drift:-18px">♡</span><span class="floaty" style="--x:29%;--size:19px;--duration:14s;--delay:-5s;--drift:16px">✨</span><span class="floaty" style="--x:42%;--size:24px;--duration:17s;--delay:-11s;--drift:-20px">💗</span><span class="floaty" style="--x:56%;--size:18px;--duration:12s;--delay:-4s;--drift:14px">✦</span><span class="floaty" style="--x:68%;--size:21px;--duration:15s;--delay:-9s;--drift:-15px">🤍</span><span class="floaty" style="--x:81%;--size:20px;--duration:13s;--delay:-6s;--drift:20px">✨</span><span class="floaty" style="--x:93%;--size:23px;--duration:18s;--delay:-13s;--drift:-16px">💙</span><span class="floaty" style="--x:12%;--size:18px;--duration:19s;--delay:-10s;--drift:24px">💗</span><span class="floaty" style="--x:37%;--size:16px;--duration:15s;--delay:-7s;--drift:-20px">✦</span><span class="floaty" style="--x:63%;--size:20px;--duration:17s;--delay:-3s;--drift:18px">♡</span><span class="floaty" style="--x:88%;--size:17px;--duration:14s;--delay:-9s;--drift:-22px">⭐</span></div>
+
+<audio id="birthday-music" src="music.mp3" preload="auto" loop></audio>
+<button id="music-toggle" type="button" aria-label="Putar atau jeda musik" onclick="toggleMusic()" style="position:fixed;right:14px;bottom:16px;z-index:80;border:1px solid #ffffffd9;border-radius:999px;background:#ffffffdf;color:#245d91;padding:11px 15px;font:600 13px system-ui,sans-serif;box-shadow:0 6px 22px #245d9128;backdrop-filter:blur(8px)">♫ Musik: mati</button>
+<div class="gift-gate" id="gift-gate">
+ <div class="gift-card">
+  <h1>For my birthday boy</h1>
+  <div class="gift-box" role="button" tabindex="0" aria-label="Tekan hadiah untuk membuka surat" onclick="openGift()" onkeydown="if(event.key===&quot;Enter&quot;||event.key===&quot; &quot;){event.preventDefault();openGift()}"><img id="gift-image" src="gift-blue.png" alt="Kotak hadiah biru" style="width:100%;height:100%;object-fit:contain;pointer-events:none"></div>
+  <p><strong>Klik hadiah untuk pesan 💙</strong></p>
+  <div class="gift-note" id="gift-note">Happy birthday cintaku!<br>Aku punya surat spesial buat kamu. Semoga kamu suka ya, dibaca pelan-pelan, oke?</div>
+  <button class="action gift-open" id="gift-open" onclick="enterWebsite()">Buka surat</button>
+ </div>
+</div>
+
+<div class="top">
+ <div class="nav" aria-label="Navigasi halaman">
+  <button class="active" onclick="go(1,this)">1</button><button onclick="go(2,this)">2</button><button onclick="go(3,this)">3</button><button onclick="go(4,this)">4</button><button onclick="go(5,this)">5</button><button onclick="go(6,this)">6</button><button onclick="go(7,this)">7</button>
+ </div>
+</div>
+<main>
+ <header class="intro">
+  <h1>Happy Birthday, My Boyfriend 💙</h1>
+  <p class="sweet-note">To my favorite person, semoga hari ini penuh senyum dan hal-hal indah. Thank you for being my safe place — I’m so lucky to have you. I love you, always. ✨</p>
+ </header>
+ <div class="book">
+  <section class="page" id="p1"><img src="pages/page-1.png" alt="Halaman 1 asli dari PDF Birthday Cintaakuu"></section>
+  <section class="page" id="p2"><img src="pages/page-2.png" alt="Halaman 2 asli dari PDF Birthday Cintaakuu"></section>
+  <section class="page" id="p3"><img src="pages/page-3.png" alt="Halaman 3 asli dari PDF Birthday Cintaakuu"></section>
+  <section class="page" id="p4"><img src="pages/page-4.png" alt="Halaman 4 asli dari PDF Birthday Cintaakuu"></section>
+  <section class="page" id="p5"><img src="pages/page-5.png" alt="Halaman 5 asli dari PDF Birthday Cintaakuu"></section>
+  <section class="page" id="p6"><img src="pages/page-6.png" alt="Halaman 6 asli dari PDF Birthday Cintaakuu"></section>
+  <section class="page" id="p7"><img src="pages/page-7.png" alt="Halaman 7 asli dari PDF Birthday Cintaakuu"></section>
+ </div>
+ <div class="love-ticker" aria-label="Pesan ulang tahun bergerak"><div class="ticker-track"><span>HAPPY BIRTHDAY, CINTAKU</span><span>SEMOGA KAMU SELALU BAHAGIA</span><span>I LOVE YOU MORE THAN YOU KNOW</span><span>HAPPY BIRTHDAY, CINTAKU</span><span>SEMOGA KAMU SELALU BAHAGIA</span><span>I LOVE YOU MORE THAN YOU KNOW</span></div></div>
+</main>
+<script>
+
+function openGift(){
+ startMusic();
+ const giftImage=document.getElementById('gift-image');
+ giftImage.src='letter-blue.png';
+ giftImage.alt='Surat bunga untuk kamu';
+ document.getElementById('gift-note').classList.add('show');
+ document.getElementById('gift-open').classList.add('show');
+ const box=document.querySelector('.gift-box'); box.style.animation='none';
+}
+function enterWebsite(){
+ startMusic();
+ document.getElementById('gift-gate').classList.add('hide');
+ document.getElementById('top');
+ document.querySelector('main').scrollIntoView({behavior:'smooth'});
+}
+
+const music=document.getElementById('birthday-music');
+const musicToggle=document.getElementById('music-toggle');
+async function startMusic(){
+ try { await music.play(); musicToggle.textContent='♫ Musik: nyala'; }
+ catch(e) { musicToggle.textContent='♫ Ketuk untuk musik'; }
+}
+async function toggleMusic(){
+ if(music.paused){ await startMusic(); }
+ else { music.pause(); musicToggle.textContent='♫ Musik: mati'; }
+}
+let current=1;
+function go(n,btn){current=n;document.getElementById('p'+n).scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.nav button').forEach((b,i)=>b.classList.toggle('active',i===n-1))}
+</script>
+</body></html>
